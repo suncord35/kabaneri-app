@@ -233,7 +233,7 @@ export default function Home() {
               )
             )
           }
-          className="w-12 h-12 rounded-lg bg-emerald-500 text-white text-2xl font-bold"
+          className="w-12 h-12 rounded-lg bg-stone-950 text-white text-2xl font-bold"
         >
           ＋
         </button>
@@ -249,7 +249,7 @@ export default function Home() {
             スマスロ カバネリ
           </span>
 
-          <span className="block text-blue-500 text-2xl mt-1">
+          <span className="block text-cyan-700 text-2xl mt-1">
             設定判別
           </span>
         </h1>
@@ -317,7 +317,7 @@ export default function Home() {
           setValue={setMizugiCount}
         />
 
-        <button className="w-full bg-blue-500 text-white rounded-lg p-3 font-bold mb-6 mt-6">
+        <button className="w-full bg-cyan-700 text-white rounded-lg p-3 font-bold mb-6 mt-6">
           判別する
         </button>
 
