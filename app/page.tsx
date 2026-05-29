@@ -250,7 +250,7 @@ export default function Home() {
 
         {/* 演出メニュー（アコーディオン） */}
         <div className="space-y-4">
-          <button class="w-full flex justify-between font-bold border-b border-[#00426D]/30 pb-2 text-[#00426D]">
+          <button className="w-full flex justify-between font-bold border-b border-[#00426D]/30 pb-2 text-[#00426D]">
             <span>📢 サンド目停止ボイス</span>
             <span>＋</span>
           </button>
