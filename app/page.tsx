@@ -391,7 +391,7 @@ export default function Home() {
 
             <div className="space-y-2">
               {finalProbability.map((item) => {
-                const isClosest = item.setting === closestSetting.setting && Number(item.probability) > 0;
+                const isClosest = item.setting === closestSetting?.setting && Number(item.probability) > 0;
                 return (
                   <div key={item.setting} className={`border rounded-xl p-3 flex justify-between items-center ${isClosest ? "bg-blue-50 border-blue-400 ring-2 ring-blue-100" : "bg-white"}`}>
                     <span className="font-bold">設定 {item.setting}</span>
