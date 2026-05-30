@@ -250,9 +250,15 @@ export default function Home() {
 
         {/* 演出メニュー（アコーディオン） */}
         <div className="space-y-4">
-          <button className="w-full flex justify-between font-bold border-b border-[#00426D]/30 pb-2 text-[#00426D]">
+          <button
+            type="button"
+            onClick={() => setShowVoice(!showVoice)}
+            className="w-full flex justify-between items-center font-bold border-b border-[#00426D]/30 py-3 px-2 min-h-12 text-[#00426D]"
+          >
             <span>📢 サンド目停止ボイス</span>
-            <span>＋</span>
+            <span className="shrink-0 w-10 text-center text-xl">
+              {showVoice ? "−" : "＋"}
+            </span>
           </button>
           {showVoice && (
             <div className="space-y-1">
@@ -299,8 +305,15 @@ export default function Home() {
               />            </div>
           )}
 
-          <button onClick={() => setShowOmikuji(!showOmikuji)} className="w-full flex justify-between font-bold border-b border-[#00426D]/30 pb-2 text-[#00426D]">
-            <span>⛩️ アイテムくじ</span><span>{showOmikuji ? "−" : "＋"}</span>
+          <button
+            type="button"
+            onClick={() => setShowOmikuji(!showOmikuji)}
+            className="w-full flex justify-between items-center font-bold border-b border-[#00426D]/30 py-3 px-2 min-h-12 text-[#00426D]"
+          >
+            <span>⛩️ アイテムくじ</span>
+            <span className="shrink-0 w-10 text-center text-xl">
+              {showOmikuji ? "−" : "＋"}
+            </span>
           </button>
           {showOmikuji && (
             <div className="space-y-1">
@@ -365,8 +378,15 @@ export default function Home() {
               />            </div>
           )}
 
-          <button onClick={() => setShowEndingScreen(!showEndingScreen)} className="w-full flex justify-between font-bold border-b border-[#00426D]/30 pb-2 text-[#00426D]">
-            <span>🖼️ 終了画面</span><span>{showEndingScreen ? "−" : "＋"}</span>
+          <button
+            type="button"
+            onClick={() => setShowEndingScreen(!showEndingScreen)}
+            className="w-full flex justify-between items-center font-bold border-b border-[#00426D]/30 py-3 px-2 min-h-12 text-[#00426D]"
+          >
+            <span>🖼️ 終了画面</span>
+            <span className="shrink-0 w-10 text-center text-xl">
+              {showEndingScreen ? "−" : "＋"}
+            </span>
           </button>
           {showEndingScreen && (
             <div className="space-y-1">
