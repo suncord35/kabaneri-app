@@ -136,7 +136,10 @@ export default function Home() {
   const episodeBonus = history.filter(i => i.type === "episode").length;
   const surugaBonus = history.filter(i => i.type === "suruga").length;
   const surugaST = history.filter(i => i.type === "surugaST").length;
-  const totalBonus = episodeBonus + surugaBonus;
+  const totalBonus =
+    episodeBonus +
+    surugaBonus +
+    surugaST;
   const totalST = episodeBonus + surugaST;
 
   const bonusRate = totalNormalGames > 0 && totalBonus > 0 ? (totalNormalGames / totalBonus).toFixed(1) : null;
@@ -234,7 +237,7 @@ export default function Home() {
           <label className="block mb-2 font-bold text-cyan-900 text-sm">💡 当選時の「液晶ゲーム数」を入力して該当するボタンを押してください</label>
           <input type="number" value={inputGames} onChange={(e) => setInputGames(e.target.value)} className="w-full border rounded-lg p-3 text-2xl font-bold text-center mb-3" placeholder="例: 250" />
           <div className="grid gap-2">
-            <button onClick={() => addHistory("episode")} className="bg-rose-800 text-white font-bold p-3 rounded-lg shadow active:bg-red-700">エピボ (ST直行)</button>
+            <button onClick={() => addHistory("episode")} className="bg-rose-800 text-white font-bold p-3 rounded-lg shadow active:bg-red-700">エビソードボーナス (ST直行)</button>
             <button onClick={() => addHistory("surugaST")} className="bg-sky-900 text-white font-bold p-3 rounded-lg shadow active:bg-purple-700">駿城 ➔ 突破成功</button>
             <button onClick={() => addHistory("suruga")} className="bg-emerald-800 text-white font-bold p-3 rounded-lg shadow active:bg-amber-600">駿城 ➔ スルー失敗</button>
           </div>
